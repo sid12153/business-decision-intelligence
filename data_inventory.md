@@ -32,3 +32,5 @@ Each row represents a single product-level transaction within a customer invoice
 - Perform customer and segment-level analysis
 - Train simple, interpretable models for forecasting or risk identification
 - Generate stakeholder-ready Excel reports and written insights
+
+Due to file size, raw data is not stored in the repository
