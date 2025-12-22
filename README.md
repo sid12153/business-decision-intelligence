@@ -37,3 +37,22 @@ To generate the full cleaned dataset locally:
 This will create:
 data/processed/transactions_clean.csv (full cleaned dataset, generated locally)
 
+## KPI Engine
+
+A reproducible KPI engine was built in Python to compute monthly business performance metrics from cleaned transactional data.
+
+The pipeline generates:
+- `kpis_monthly.csv`: overall monthly business KPIs
+- `kpis_monthly_country.csv`: country-level monthly KPI breakdowns
+
+KPIs include revenue, orders, active customers, units sold, average order value (AOV), and month-over-month growth metrics.
+All KPI definitions and formulas are documented in `kpi_definitions.md`.
+
+## KPI Validation
+
+Computed KPIs were validated using multiple consistency checks:
+- Logical checks ensuring Orders ≥ Active Customers for all months
+- Month-over-month growth sanity checks across the time series
+- Reconciliation of country-level revenue against overall business revenue
+
+Country-level aggregations reconcile exactly with overall metrics, confirming aggregation correctness.
