@@ -93,3 +93,13 @@ This document describes the data cleaning and filtering decisions applied to the
 - Analysis focuses exclusively on completed, revenue-generating transactions.
 - No currency conversion is applied, as all transactions are recorded in a single currency.
 - The cleaned dataset serves as the single source of truth for all downstream KPIs, models, and reports.
+
+## Duplicate rows (multi-sheet merge)
+
+**Rule**
+- Drop exact full-row duplicates after combining sheets.
+
+**Rationale**
+- Online Retail II is provided across multiple sheets and contains repeated identical rows after merging.
+- Only exact duplicates are removed to avoid accidentally dropping legitimate repeated purchases that may share the same invoice and product keys.
+
