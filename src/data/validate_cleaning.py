@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 
-clean_path = Path("./transactions_clean.csv")
+clean_path = Path("data/processed/transactions_clean.csv")
 df = pd.read_csv(clean_path)
 
 # ----------------------------
@@ -46,4 +46,5 @@ business_key_cols = ["Invoice", "StockCode", "InvoiceDate"]
 business_key_dup = df.duplicated(subset=business_key_cols).sum()
 print("Duplicates by Invoice + StockCode + InvoiceDate:", business_key_dup)
 print("Rows after dropping exact duplicates:", len(df))
+
 
