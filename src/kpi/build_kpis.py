@@ -55,11 +55,9 @@ def compute_monthly_kpis_by_country(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main():
-    # input_path = Path("data/processed/transactions_clean.csv")
-    input_path = Path("./transactions_clean.csv")
-    # output_dir = Path("data/processed")
-    output_dir = Path(".")
-
+    input_path = Path("data/processed/transactions_clean.csv")
+    output_dir = Path("data/processed")
+    
     df = load_clean_data(input_path)
     df = add_invoice_month(df)
 
@@ -77,3 +75,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
