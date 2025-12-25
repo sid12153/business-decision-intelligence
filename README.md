@@ -68,3 +68,13 @@ The dashboard includes:
 - Formula-based validation checks (AOV recomputation and revenue reconciliation)
 
 The Excel layer emphasizes transparency and correctness rather than interactivity, mirroring real-world BI reporting practices.
+
+## Executive Summary
+
+This project develops a decision intelligence reporting layer using transactional retail data to analyze revenue performance, customer activity, and order behavior over time.
+
+Monthly analysis reveals clear seasonality, with revenue consistently peaking during September to November and declining in December, driven primarily by reduced order volume rather than changes in average order value. Revenue is highly concentrated in the United Kingdom, while several non-UK markets contribute smaller but stable revenue streams, highlighting both geographic dependence and diversification opportunities.
+
+Average Order Value trends upward across the observed period, indicating improved per-order monetization even during periods of fluctuating customer activity. All key metrics were validated through reconciliation checks between raw data, Python-based KPI generation, and Excel-based calculations to ensure analytical accuracy and transparency.
+
+The final output includes a validated Excel dashboard designed for business review, emphasizing clarity, correctness, and real-world reporting practices rather than interactivity or visualization complexity.
