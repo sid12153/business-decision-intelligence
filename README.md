@@ -1,3 +1,10 @@
+![Analytics](https://img.shields.io/badge/Domain-Business%20Analytics-blue)
+![ML](https://img.shields.io/badge/ML-Customer%20Modeling-orange)
+![Clustering](https://img.shields.io/badge/Unsupervised-RFM%20Clustering-purple)
+![Probabilistic](https://img.shields.io/badge/Modeling-BG%2FNBD%20%7C%20Gamma--Gamma-green)
+![Explainability](https://img.shields.io/badge/Explainability-SHAP-red)
+![Decision Intelligence](https://img.shields.io/badge/Outcome-Revenue%20at%20Risk-black)
+
 # Business Decision Intelligence for KPI Analysis and Forecasting
 Business decisions are often driven by metrics such as revenue, growth, retention, and customer behavior. In practice, these metrics are usually computed in spreadsheets, explored through ad-hoc analysis, and explained manually in reports or presentations.
 
