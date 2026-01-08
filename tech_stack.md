@@ -1,18 +1,31 @@
 # Tech Stack
 
-**Languages**
+## Languages
 - Python
+- SQL
 
-**Data Processing and Analysis**
+## Data Processing and Analysis
 - pandas
 - numpy
 
-**Reporting and Business Analysis**
-- Microsoft Excel (Pivot Tables, formulas, XLOOKUP, SUMIFS, dashboard reporting)
+## Database and Analytics Layer
+- PostgreSQL
+- pgAdmin
+- SQL views, CTEs, joins, and window functions (NTILE)
 
+## Machine Learning and Modeling
+- scikit-learn (K-Means, metrics)
+- lifetimes (BG/NBD and Gamma-Gamma CLV)
+- XGBoost (churn classification)
+- SHAP (model explainability)
 
-**Data Storage**
-- CSV exports for downstream analysis
+## Reporting and BI
+- Microsoft Excel (PivotTables, slicers, formulas: XLOOKUP, VLOOKUP, INDEX-MATCH, IF, COUNTIF, SUMIF, SUMIFS)
+- Power BI (PostgreSQL connector, multi-page decision dashboard)
 
-**Version Control**
-- GitHub
+## Outputs
+- CSV exports for reproducible sharing (KPIs and samples)
+- Power BI dashboard file (.pbix) for interactive reporting
+
+## Version Control
+- Git and GitHub
