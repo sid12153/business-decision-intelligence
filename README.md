@@ -1,4 +1,4 @@
-![Analytics](https://img.shields.io/badge/Domain-Data/Business%20Analytics-blue)
+![Analytics](https://img.shields.io/badge/Domain-Data%20%7C%20Business%20Analytics-blue)
 ![Excel](https://img.shields.io/badge/Reporting-Excel-green)
 ![Database](https://img.shields.io/badge/Database-PostgreSQL-blue)
 ![BI](https://img.shields.io/badge/Dashboard-Power%20BI-yellow)
@@ -25,7 +25,7 @@ The project uses the **Online Retail II** dataset from the UCI Machine Learning 
 - Time range: **December 2009 – December 2011**
 - Total transactions: **805,549**
 - Distinct customers: **5,878**
-- Fields include invoice identifiers, quantities, prices, timestamps, customer IDs, and country.
+- Fields include invoice identifiers, quantities, prices, timestamps, customer IDs, and country
 
 Multiple yearly sheets (2009–2010 and 2010–2011) were combined into a single analytical dataset prior to downstream processing.
 
@@ -85,7 +85,7 @@ The Excel dashboard includes:
 All Excel metrics were validated against PostgreSQL and Python outputs to ensure consistency.
 
 **Screenshot:**  
-`assets/Excel_DI_dashboard.jpg`
+![Excel Dashboard](assets/Excel_DI_dashboard.jpg)
 
 ---
 
@@ -94,6 +94,7 @@ All Excel metrics were validated against PostgreSQL and Python outputs to ensure
 Customer behavior was segmented using **RFM analysis** combined with **K-Means clustering**.
 
 - Features: Recency (days), Frequency (orders), Monetary value
+- Clusters: **k = 3** (silhouette score = **0.401**)
 - Output: Data-driven RFM segments (e.g., Champions, Loyalists, At-Risk)
 - Purpose: Enable targeted retention and marketing strategies
 
@@ -111,8 +112,8 @@ To estimate future customer value, the project uses **probabilistic lifetime mod
 
 ### Outputs
 - 90-day expected customer lifetime value (`clv_90d`)
-- Mean CLV (90d): **\$540**
-- Median CLV (90d): **\$202**
+- Mean CLV (90d): **$540**
+- Median CLV (90d): **$202**
 
 This approach models customer purchasing as a stochastic process, aligning with industry-standard retention and valuation practices.
 
@@ -135,7 +136,7 @@ A time-aware churn prediction pipeline was built to answer:
 - Precision: **0.33**
 - F1-score: **0.47**
 
-High recall was prioritized to minimize missed at-risk customers.
+Recall-optimized churn modeling was chosen to **minimize missed churners in retention workflows**, prioritizing early intervention over false positives.
 
 ---
 
@@ -156,9 +157,11 @@ Global feature importance is stored in `analytics.shap_importance` and surfaced 
 
 Churn predictions and CLV estimates are combined to translate model outputs into financial impact.
 
-### Key metric
-- **Revenue at Risk (90 days): \$56.9K**
-- High-risk customers: ~**10%** of active base
+### Key metrics
+- Customers in decision table: **2,973**
+- High-risk customers: **298 (~10%)**
+- Total CLV (90d): **$2.04M**
+- **Revenue at Risk (90d): $56.9K**
 
 The unified decision table (`analytics.v_customer_decisions`) supports:
 - Customer-level retention prioritization
@@ -174,10 +177,17 @@ A multi-page **Power BI dashboard** was built directly on PostgreSQL views.
 ### Pages include
 1. **Executive Overview** – KPIs, high-risk rate, total CLV, revenue at risk  
 2. **RFM Segmentation** – customer distribution, average CLV, risk by segment  
-3. **High-Risk Customer List** – actionable retention call list  
-4. **Explainability** – SHAP-based churn driver analysis  
+3. **High-Risk Customers** – actionable retention call list  
+4. **Explainability (SHAP)** – global churn driver analysis  
 
-This dashboard connects modeling outputs directly to business decisions.
+**Screenshots:**  
+![PowerBI Page 1](assets/PowerBI_Dashboard/ExecutiveOverview_Page_1.jpg)
+
+![PowerBI Page 2](assets/PowerBI_Dashboard/Segmentation_Page_2.jpg)
+
+![PowerBI Page 3](assets/PowerBI_Dashboard/High_Risk_Customer_Page_3.jpg)
+
+![PowerBI Page 4](assets/PowerBI_Dashboard/SHAP_Page_4.jpg)
 
 ---
 
@@ -192,10 +202,3 @@ This project demonstrates how common business analytics workflows can be elevate
 - Executive-ready dashboards
 
 The result is a system that not only analyzes what happened, but also quantifies **what is likely to happen next and why**.
-
----
-
-## Results
-
-- Excel dashboard screenshot:  
-  ![excel-dashboard](assets/Excel_DI_dashboard.jpg)
