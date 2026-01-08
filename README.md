@@ -3,6 +3,7 @@
 ![Database](https://img.shields.io/badge/Database-PostgreSQL-blue)
 ![BI](https://img.shields.io/badge/Dashboard-Power%20BI-yellow)
 ![ML](https://img.shields.io/badge/ML-Customer%20Modeling-orange)
+![Model](https://img.shields.io/badge/Model-XGBoost-darkgreen)
 ![Clustering](https://img.shields.io/badge/Unsupervised-RFM%20Clustering-purple)
 ![Probabilistic](https://img.shields.io/badge/Modeling-BG%2FNBD%20%7C%20Gamma--Gamma-green)
 ![Explainability](https://img.shields.io/badge/Explainability-SHAP-red)
