@@ -6,4 +6,4 @@
 - [x] Insights write-up
 - [x] Excel pivot tables and formulas
 - [x] Excel dashboard
-- [ ] 1-page stakeholder summary
+- [x] 1-page stakeholder summary
